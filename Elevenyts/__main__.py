@@ -19,6 +19,7 @@ if sys.platform != "win32":
 from Elevenyts import (tune, app, config, db,
                    logger, stop, userbot, yt)
 from Elevenyts.plugins import all_modules
+from Elevenyts.helpers.startup_hooks import precheck_channels  # Fixed: Import moved to top
 
 
 async def main():
@@ -30,8 +31,7 @@ async def main():
         await app.boot()
 
         # NEW: Run channel pre-check after bot is booted
-from Elevenyts.helpers.startup_hooks import precheck_channels
-        await precheck_channels()
+        await precheck_channels()  # Fixed: Now properly indented inside main()
         
         # Step 3: Start assistant/userbot clients (for joining voice chats)
         await userbot.boot()
