@@ -1,22 +1,20 @@
-FROM python:3.12-slim
+FROM python:3.10-slim
 
-# Install dependencies (ffmpeg + build tools + curl + unzip)
-RUN apt-get update && \
-    apt-get install -y ffmpeg gcc python3-dev curl unzip && \
-    rm -rf /var/lib/apt/lists/*
+# सभी जरूरी पैकेज एक साथ इंस्टॉल
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    nodejs \
+    npm \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# App setup
-WORKDIR /app
-COPY . .
+# ऐप कॉपी करें
+COPY . /app/
+WORKDIR /app/
 
-# Upgrade pip (recommended)
-RUN pip install --upgrade pip
+# पायथन पैकेज इंस्टॉल करें
+RUN pip install -r requirements.txt
 
-# Install Python deps
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Install Deno
-RUN curl -fsSL https://deno.land/install.sh | sh
-ENV PATH="/root/.deno/bin:${PATH}"
-
-CMD ["bash", "start"]
+# स्टार्ट कमांड
+CMD bash start
