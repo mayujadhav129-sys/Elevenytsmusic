@@ -139,10 +139,10 @@ bash start
 ## 📞 Support & Contact
 
 - **Telegram Channel**: [@Elevenyts](https://t.me/elevenyts)
-- **Support Group**: [@Elevenyts Music]([https://t.me/elevenytsmusic](https://t.me/+Wh6a_qY8YpU0MDk1)) 
+- **Support Group**: [@Elevenyts Music]([https://t.me/elevenytsmusic)) 
 
 ---
-
+ft
 ## 📝 Notes
 
 - Make sure your bot is admin in both the group and logger group
