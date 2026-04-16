@@ -139,7 +139,7 @@ bash start
 ## 📞 Support & Contact
 
 - **Telegram Channel**: [@Elevenyts](https://t.me/elevenyts)
-- **Support Group**: [@Elevenyts Music](https://t.me/elevenytsmusic) 
+- **Support Group**: [@Elevenyts Music]([https://t.me/elevenytsmusic](https://t.me/+Wh6a_qY8YpU0MDk1)) 
 
 ---
 
